@@ -2,6 +2,7 @@
 
 from transformers import SpeechT5Processor, SpeechT5ForTextToSpeech, SpeechT5HifiGan
 from datasets import load_dataset
+from voice_generator import VoiceGenerator
 import torch
 import soundfile as sf
 #from playsound import playsound
@@ -11,6 +12,7 @@ import random
 import threading
 import winsound
 import time
+import os
 #import mutagen
 from mutagen.wave import WAVE 
 
@@ -20,6 +22,8 @@ S:str = "ABEGIMOUZ" #the most important sounds
 nxt_video = 0
 AUD_done:bool = True
 VID_done:bool = True
+
+voice_generator = VoiceGenerator()
 
 #dict (letter : image of this sound)
 d = dict()
@@ -63,9 +67,7 @@ FPS: int = 30
 screen = pygame.display.set_mode((n, m))
 
 def create_wav(TEXT: str, num_aud: int) -> None:
-    inputs = processor(text=TEXT, return_tensors="pt")
-    speech = model.generate_speech(inputs["input_ids"], speaker_embeddings, vocoder=vocoder)
-    sf.write(f"speech{num_aud}.wav", speech.numpy(), samplerate=16000)
+    vg.generate(TEXT, os.getcwd(), f"speech{num_aud}.wav")
 
 
 def show_pics(text: str, ln: int, num_video: int) -> None:
