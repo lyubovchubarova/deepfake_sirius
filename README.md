@@ -4,7 +4,9 @@
 
 ## Vosk voice cloning finetune
 
-Дообучали модель с опорой на [инструкцию от vosk для voice cloning](https://github.com/alphacep/vosk-tts/blob/master/training/README.md) на русскоязычной модели. Собрали много
+Дообучали модель с опорой на [инструкцию от vosk для voice cloning](https://github.com/alphacep/vosk-tts/blob/master/training/README.md) на русскоязычной модели. Собрали много ошибок по пути, полная инструкция с процессом обучения в `voicecloning_russian_tutorial.ipynb`.
+
+Датасет [здесь](https://drive.google.com/drive/folders/1rBujDC7qd-J8cEoDoEkQLRd9UQiSQibs)
 
 
 ## Запуск приложения
