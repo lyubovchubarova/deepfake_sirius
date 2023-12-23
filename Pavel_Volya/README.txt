@@ -1,1 +1,0 @@
-Чтобы файл main.py запустился, необходимо в папку Pavel_Volya добавить папки recognizer_vosk_small_ru и vosk-volya-finetuned
