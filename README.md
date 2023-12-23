@@ -1,7 +1,5 @@
 # deepfake_sirius
 
-## Краткое описание проекта
-
 ## Vosk voice cloning finetune
 
 Дообучали модель с опорой на [инструкцию от vosk для voice cloning](https://github.com/alphacep/vosk-tts/blob/master/training/README.md) на русскоязычной модели. Собрали много ошибок по пути, полная инструкция с процессом обучения в `voicecloning_russian_tutorial.ipynb`.
@@ -10,6 +8,8 @@
 
 
 ## Запуск приложения
+
+[ [non real-time demo](https://huggingface.co/spaces/ledddev/deepfake_sirius) ]
 
 Сначала необходимо скачать папку Pavel_Volya на компьютер
 
