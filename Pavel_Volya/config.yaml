@@ -1,0 +1,15 @@
+pathes:
+  voice_generation_model_path: "/vosk-volya-finetuned"
+  static_image_path: "/materials/sit2.jpg"
+  video_sitting_path: "/materials/sit2.mp4"
+  recognized_audio_path: '/recognized.wav'
+  generated_audio_path: '/materials/audio/output.wav'
+  generated_video_path: '/materials/video.mp4'
+  offline_voice_recognition_model_path: '/recognizer_vosk_small_ru'
+
+yagpt:
+  instruct: ""
+  url: "https://llm.api.cloud.yandex.net/llm/v1alpha/instruct"
+  model_type: "general"
+  max_tokens: 1500
+  temperature: 0.5
